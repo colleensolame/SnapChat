@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F6F9F631F6FCAE400B5F0F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F9F621F6FCAE400B5F0F3 /* AppDelegate.swift */; };
-		0F6F9F651F6FCAE400B5F0F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F9F641F6FCAE400B5F0F3 /* ViewController.swift */; };
+		0F6F9F651F6FCAE400B5F0F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F9F641F6FCAE400B5F0F3 /* SignInViewController.swift */; };
 		0F6F9F681F6FCAE400B5F0F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F9F661F6FCAE400B5F0F3 /* Main.storyboard */; };
 		0F6F9F6A1F6FCAE400B5F0F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F9F691F6FCAE400B5F0F3 /* Assets.xcassets */; };
 		0F6F9F6D1F6FCAE400B5F0F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F9F6B1F6FCAE400B5F0F3 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		0F6F9F5F1F6FCAE400B5F0F3 /* SnapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6F9F621F6FCAE400B5F0F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F6F9F641F6FCAE400B5F0F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F6F9F641F6FCAE400B5F0F3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0F6F9F671F6FCAE400B5F0F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F6F9F691F6FCAE400B5F0F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F6F9F6C1F6FCAE400B5F0F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				0F6F9F621F6FCAE400B5F0F3 /* AppDelegate.swift */,
-				0F6F9F641F6FCAE400B5F0F3 /* ViewController.swift */,
+				0F6F9F641F6FCAE400B5F0F3 /* SignInViewController.swift */,
 				0F6F9F661F6FCAE400B5F0F3 /* Main.storyboard */,
 				0F6F9F691F6FCAE400B5F0F3 /* Assets.xcassets */,
 				0F6F9F6B1F6FCAE400B5F0F3 /* LaunchScreen.storyboard */,
@@ -171,12 +171,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SnapChat/Pods-SnapChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F6F9F651F6FCAE400B5F0F3 /* ViewController.swift in Sources */,
+				0F6F9F651F6FCAE400B5F0F3 /* SignInViewController.swift in Sources */,
 				0F6F9F631F6FCAE400B5F0F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +397,7 @@
 				0F6F9F731F6FCAE400B5F0F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
