@@ -38,6 +38,7 @@ class SignInViewController: UIViewController {
             } else {
                 print("Signed in successfully")
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                
             }
         }
     }
