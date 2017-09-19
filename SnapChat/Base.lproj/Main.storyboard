@@ -110,6 +110,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZV0-fu-Sy7">
                             <connections>
                                 <action selector="btnAdd:" destination="TDx-tI-GYD" id="Bky-o1-r1a"/>
+                                <segue destination="fqZ-qD-56u" kind="show" id="amy-VL-hST"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,6 +121,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQu-KZ-jYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1842.4000000000001" y="122.78860569715144"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="3fB-kx-iGx">
+            <objects>
+                <viewController id="fqZ-qD-56u" customClass="PictureViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKV-YV-tuq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wjd-4Z-lje"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sns-PN-lYl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wtl-Ee-x4l">
+                                <rect key="frame" x="67.5" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QKy-kX-W52"/>
+                                    <constraint firstAttribute="height" constant="128" id="qpS-ha-h4J"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btq-TS-C6R">
+                                <rect key="frame" x="67.5" y="227" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDe-sy-IHo">
+                                <rect key="frame" x="171.5" y="277" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="btnNext:" destination="fqZ-qD-56u" eventType="touchUpInside" id="ayH-cE-YqV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDe-sy-IHo" firstAttribute="top" secondItem="btq-TS-C6R" secondAttribute="bottom" constant="20" id="EiD-xn-qc0"/>
+                            <constraint firstItem="btq-TS-C6R" firstAttribute="width" secondItem="wtl-Ee-x4l" secondAttribute="width" id="Krk-aq-bQQ"/>
+                            <constraint firstItem="wtl-Ee-x4l" firstAttribute="top" secondItem="wKV-YV-tuq" secondAttribute="bottom" constant="20" id="lPx-u0-oIr"/>
+                            <constraint firstItem="btq-TS-C6R" firstAttribute="centerX" secondItem="sns-PN-lYl" secondAttribute="centerX" id="rcA-BS-FIm"/>
+                            <constraint firstItem="btq-TS-C6R" firstAttribute="top" secondItem="wtl-Ee-x4l" secondAttribute="bottom" constant="15" id="sIg-zW-NcM"/>
+                            <constraint firstItem="bDe-sy-IHo" firstAttribute="centerX" secondItem="sns-PN-lYl" secondAttribute="centerX" id="y0A-JN-hTb"/>
+                            <constraint firstItem="wtl-Ee-x4l" firstAttribute="centerX" secondItem="sns-PN-lYl" secondAttribute="centerX" id="zLt-bi-Opy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZtN-4k-BAg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="h0f-Pk-o5S">
+                            <connections>
+                                <action selector="btnCamera:" destination="fqZ-qD-56u" id="L0k-5k-fMo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="bDe-sy-IHo" id="aze-Sf-Yx5"/>
+                        <outlet property="snapImageView" destination="wtl-Ee-x4l" id="nQp-Vf-0eP"/>
+                        <outlet property="txtDescription" destination="btq-TS-C6R" id="exz-YX-qmh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6K5-1O-hQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIT-Zt-v6R">

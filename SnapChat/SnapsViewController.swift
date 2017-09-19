@@ -37,28 +37,6 @@ class SnapsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func btnAdd(_ sender: Any) {
-        let alertController = UIAlertController(title: "Create New Collection", message: nil, preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
-        
-        let confirmAction = UIAlertAction(title: "Create", style: .default) { (_) in
-            self.collection.append((alertController.textFields?[0].text)!)
-            self.snapsTableView.reloadData()
-        }
-        
-        
-        
-        alertController.addTextField(configurationHandler: {(textField : UITextField!) -> Void in
-            textField.placeholder = "New Collection"
-        })
-        
-        alertController.addAction(confirmAction)
-        alertController.addAction(cancelAction)
-        
-        self.present(alertController, animated: true, completion: nil)
-        
-        
-        
         
     }
     
