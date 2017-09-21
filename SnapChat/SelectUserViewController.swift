@@ -13,6 +13,8 @@ import FirebaseDatabase
 class SelectUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var users: [User] = []
+    var imageURL = ""
+    var descript = ""
 
     @IBOutlet weak var userTableView: UITableView!
     
@@ -49,9 +51,15 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         let user = users[indexPath.row]
         
         // Create dictionary for user info
-        let snap = ["from": user.email, "description": "hello", "imageURL": "www.image.com"]
+        let snap = ["from": user.email, "description": descript, "imageURL": imageURL]
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        navigationController?.popToRootViewController(animated: true)
+        
+        
     }
     
 
