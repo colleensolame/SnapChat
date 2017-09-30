@@ -40,16 +40,22 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func btnNext(_ sender: Any) {
-        nextButton.isEnabled = false
-        let imagesFolder = Storage.storage().reference().child("images")
         
+        nextButton.isEnabled = false
+        
+        let imagesFolder = Storage.storage().reference().child("images")
         let imageData = UIImageJPEGRepresentation(snapImageView.image!, 0.1)!
         
         imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
+            
             print("We tried to upload!")
+            
             if error != nil {
+                
                 print("We had an error: \(String(describing: error))")
+                
             } else {
+                
                 print(metadata?.downloadURL() as Any)
                 
                 self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()!.absoluteString)
